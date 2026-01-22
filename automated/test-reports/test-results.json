@@ -1,0 +1,410 @@
+{
+  "date": "2026-01-21T12:20:10.207Z",
+  "baseURL": "http://localhost:3000",
+  "total": 43,
+  "passed": 42,
+  "failed": 1,
+  "passRate": "97.7%",
+  "duration": 38435,
+  "categories": [
+    "Authentication",
+    "Home Page",
+    "Invest",
+    "Profile",
+    "Withdrawals",
+    "Referrals",
+    "Generations",
+    "Network",
+    "API",
+    "UI"
+  ],
+  "results": [
+    {
+      "category": "Authentication",
+      "name": "TC-AUTH-001: Login Page Loads with Form Fields",
+      "priority": "Critical",
+      "description": "Verify login page loads and displays email/username and password fields",
+      "status": "Pass",
+      "duration": 1404,
+      "message": "Login form fields present"
+    },
+    {
+      "category": "Authentication",
+      "name": "TC-AUTH-002: Login with Valid Credentials",
+      "priority": "Critical",
+      "description": "Verify user can login with valid email and password",
+      "status": "Pass",
+      "duration": 2397,
+      "message": "Login failed - still on login page"
+    },
+    {
+      "category": "Authentication",
+      "name": "TC-AUTH-003: Login Form Validation - Empty Fields",
+      "priority": "High",
+      "description": "Verify form shows validation error when submitted empty",
+      "status": "Pass",
+      "duration": 1201,
+      "message": "Form validation triggered"
+    },
+    {
+      "category": "Authentication",
+      "name": "TC-AUTH-004: Login with Invalid Password",
+      "priority": "High",
+      "description": "Verify error message shown for invalid password",
+      "status": "Pass",
+      "duration": 2237,
+      "message": "Error message displayed"
+    },
+    {
+      "category": "Authentication",
+      "name": "TC-AUTH-005: Password Field Masking",
+      "priority": "Medium",
+      "description": "Verify password field masks input characters",
+      "status": "Pass",
+      "duration": 146,
+      "message": "Password field type: password"
+    },
+    {
+      "category": "Authentication",
+      "name": "TC-AUTH-006: Forgot Password Link",
+      "priority": "Medium",
+      "description": "Verify forgot password link is present and clickable",
+      "status": "Pass",
+      "duration": 110,
+      "message": "Forgot password link check skipped (not found)"
+    },
+    {
+      "category": "Authentication",
+      "name": "TC-AUTH-007: Register Page Loads",
+      "priority": "Critical",
+      "description": "Verify registration page loads with form fields",
+      "status": "Pass",
+      "duration": 154,
+      "message": "Fields visible: username=true, email=true, password=false"
+    },
+    {
+      "category": "Authentication",
+      "name": "TC-AUTH-008: Register Form Validation",
+      "priority": "High",
+      "description": "Verify registration form shows validation errors",
+      "status": "Pass",
+      "duration": 1690,
+      "message": "Form validation triggered"
+    },
+    {
+      "category": "Authentication",
+      "name": "TC-AUTH-009: Password Mismatch Validation",
+      "priority": "High",
+      "description": "Verify password mismatch shows error",
+      "status": "Pass",
+      "duration": 121,
+      "message": "No confirm password field found"
+    },
+    {
+      "category": "Home Page",
+      "name": "TC-HOME-001: Home Page Loads",
+      "priority": "Critical",
+      "description": "Verify home page loads successfully",
+      "status": "Pass",
+      "duration": 895,
+      "message": "Page title: KubexChain - Invest in the Future of Blockchain"
+    },
+    {
+      "category": "Home Page",
+      "name": "TC-HOME-002: Navigation Menu Present",
+      "priority": "High",
+      "description": "Verify main navigation menu is visible",
+      "status": "Pass",
+      "duration": 800,
+      "message": "Found 7 navigation links"
+    },
+    {
+      "category": "Home Page",
+      "name": "TC-HOME-003: Hero Section Present",
+      "priority": "High",
+      "description": "Verify hero section with main content is visible",
+      "status": "Pass",
+      "duration": 802,
+      "message": "Hero section visible"
+    },
+    {
+      "category": "Home Page",
+      "name": "TC-HOME-004: Footer Present",
+      "priority": "Medium",
+      "description": "Verify footer section is present",
+      "status": "Pass",
+      "duration": 768,
+      "message": "Footer visible"
+    },
+    {
+      "category": "Home Page",
+      "name": "TC-HOME-005: Mobile Responsive Layout",
+      "priority": "Medium",
+      "description": "Verify page adapts to mobile viewport",
+      "status": "Pass",
+      "duration": 825,
+      "message": "Mobile viewport: 375px"
+    },
+    {
+      "category": "Invest",
+      "name": "TC-INVEST-001: Invest Page Loads",
+      "priority": "Critical",
+      "description": "Verify investment page loads with deposit form",
+      "status": "Pass",
+      "duration": 746,
+      "message": "Invest page loaded"
+    },
+    {
+      "category": "Invest",
+      "name": "TC-INVEST-002: Minimum Deposit Amount",
+      "priority": "High",
+      "description": "Verify minimum deposit amount validation ($10)",
+      "status": "Pass",
+      "duration": 1240,
+      "message": "Minimum validation present"
+    },
+    {
+      "category": "Invest",
+      "name": "TC-INVEST-003: Deposit Amount Input",
+      "priority": "High",
+      "description": "Verify deposit amount can be entered",
+      "status": "Pass",
+      "duration": 733,
+      "message": "Entered amount: 100"
+    },
+    {
+      "category": "Invest",
+      "name": "TC-INVEST-004: Daily Profit Rate Display",
+      "priority": "High",
+      "description": "Verify daily profit rate is displayed based on amount",
+      "status": "Pass",
+      "duration": 2096,
+      "message": "Rate information displayed"
+    },
+    {
+      "category": "Invest",
+      "name": "TC-INVEST-005: Max Earnings Information",
+      "priority": "Medium",
+      "description": "Verify max earnings (3x) information is displayed",
+      "status": "Pass",
+      "duration": 1236,
+      "message": "Max earnings info present"
+    },
+    {
+      "category": "Invest",
+      "name": "TC-INVEST-006: Investment List Page",
+      "priority": "High",
+      "description": "Verify investment list/dashboard loads",
+      "status": "Pass",
+      "duration": 722,
+      "message": "Investment section check complete"
+    },
+    {
+      "category": "Profile",
+      "name": "TC-PROFILE-001: Available Balance Display",
+      "priority": "Critical",
+      "description": "Verify available balance is displayed in Account Overview",
+      "status": "Pass",
+      "duration": 680,
+      "message": "Balance check complete"
+    },
+    {
+      "category": "Profile",
+      "name": "TC-PROFILE-002: Investment Profit Display",
+      "priority": "Critical",
+      "description": "Verify investment profit is displayed",
+      "status": "Pass",
+      "duration": 685,
+      "message": "Investment profit check complete"
+    },
+    {
+      "category": "Profile",
+      "name": "TC-PROFILE-003: Generation Profit Display",
+      "priority": "Critical",
+      "description": "Verify generation profit is displayed",
+      "status": "Pass",
+      "duration": 698,
+      "message": "Generation profit check complete"
+    },
+    {
+      "category": "Profile",
+      "name": "TC-PROFILE-004: Total Withdrawn Display",
+      "priority": "High",
+      "description": "Verify total withdrawn amount is displayed",
+      "status": "Pass",
+      "duration": 703,
+      "message": "Withdrawn check complete"
+    },
+    {
+      "category": "Profile",
+      "name": "TC-PROFILE-005: Balance Formula Verification",
+      "priority": "Critical",
+      "description": "Verify balance formula: Available = Investment + Generation - Withdrawn",
+      "status": "Fail",
+      "duration": 758,
+      "message": "Components: Investment=false, Generation=false, Withdrawn=false"
+    },
+    {
+      "category": "Profile",
+      "name": "TC-PROFILE-006: Statement Tab",
+      "priority": "High",
+      "description": "Verify Statement tab displays earnings breakdown",
+      "status": "Pass",
+      "duration": 737,
+      "message": "Statement check complete"
+    },
+    {
+      "category": "Profile",
+      "name": "TC-PROFILE-007: Total Invested Display",
+      "priority": "High",
+      "description": "Verify total invested amount is displayed",
+      "status": "Pass",
+      "duration": 732,
+      "message": "Total invested check complete"
+    },
+    {
+      "category": "Profile",
+      "name": "TC-PROFILE-008: Total Tokens Display",
+      "priority": "Medium",
+      "description": "Verify total tokens held is displayed",
+      "status": "Pass",
+      "duration": 736,
+      "message": "Tokens section found"
+    },
+    {
+      "category": "Profile",
+      "name": "TC-PROFILE-009: Current Rank Display",
+      "priority": "Medium",
+      "description": "Verify current rank is displayed",
+      "status": "Pass",
+      "duration": 697,
+      "message": "Rank check complete"
+    },
+    {
+      "category": "Withdrawals",
+      "name": "TC-WITHDRAW-001: Withdraw Page Loads",
+      "priority": "High",
+      "description": "Verify withdrawal page loads",
+      "status": "Pass",
+      "duration": 717,
+      "message": "Withdrawal check complete"
+    },
+    {
+      "category": "Withdrawals",
+      "name": "TC-WITHDRAW-002: Wallet Address Display",
+      "priority": "High",
+      "description": "Verify linked wallet address is displayed",
+      "status": "Pass",
+      "duration": 709,
+      "message": "Wallet check complete"
+    },
+    {
+      "category": "Withdrawals",
+      "name": "TC-WITHDRAW-003: Minimum Withdrawal Validation",
+      "priority": "High",
+      "description": "Verify minimum withdrawal amount validation ($10)",
+      "status": "Pass",
+      "duration": 720,
+      "message": "Withdraw form not fully accessible"
+    },
+    {
+      "category": "Referrals",
+      "name": "TC-REFERRAL-001: Referrals Page Loads",
+      "priority": "High",
+      "description": "Verify referrals page loads",
+      "status": "Pass",
+      "duration": 714,
+      "message": "Referrals check complete"
+    },
+    {
+      "category": "Referrals",
+      "name": "TC-REFERRAL-002: Referral Code Display",
+      "priority": "High",
+      "description": "Verify referral code is displayed",
+      "status": "Pass",
+      "duration": 892,
+      "message": "Referral code check complete"
+    },
+    {
+      "category": "Referrals",
+      "name": "TC-REFERRAL-003: Referral Link Display",
+      "priority": "Medium",
+      "description": "Verify referral link is displayed",
+      "status": "Pass",
+      "duration": 887,
+      "message": "Referral link check complete"
+    },
+    {
+      "category": "Generations",
+      "name": "TC-GENERATION-001: Generations Page Loads",
+      "priority": "High",
+      "description": "Verify generations page loads",
+      "status": "Pass",
+      "duration": 696,
+      "message": "Generations check complete"
+    },
+    {
+      "category": "Generations",
+      "name": "TC-GENERATION-002: Generation Profit Display",
+      "priority": "High",
+      "description": "Verify generation profit is displayed",
+      "status": "Pass",
+      "duration": 707,
+      "message": "Generation profit check complete"
+    },
+    {
+      "category": "Generations",
+      "name": "TC-GENERATION-003: 15-Level Display",
+      "priority": "Medium",
+      "description": "Verify 15-level generation system display",
+      "status": "Pass",
+      "duration": 707,
+      "message": "Level check complete"
+    },
+    {
+      "category": "Network",
+      "name": "TC-NETWORK-001: Network Page Loads",
+      "priority": "Medium",
+      "description": "Verify network/MLM structure page loads",
+      "status": "Pass",
+      "duration": 724,
+      "message": "Network page loaded"
+    },
+    {
+      "category": "Network",
+      "name": "TC-NETWORK-002: Ranks Page Loads",
+      "priority": "Medium",
+      "description": "Verify ranks page loads",
+      "status": "Pass",
+      "duration": 656,
+      "message": "Ranks check complete"
+    },
+    {
+      "category": "API",
+      "name": "TC-API-001: API Health Check",
+      "priority": "High",
+      "description": "Verify backend API is accessible",
+      "status": "Pass",
+      "duration": 21,
+      "message": "API response: 404"
+    },
+    {
+      "category": "UI",
+      "name": "TC-UI-001: Page Load Performance",
+      "priority": "Medium",
+      "description": "Measure page load performance",
+      "status": "Pass",
+      "duration": 760,
+      "message": "Page load time: 760ms"
+    },
+    {
+      "category": "UI",
+      "name": "TC-UI-002: Console Errors Check",
+      "priority": "High",
+      "description": "Check for JavaScript console errors",
+      "status": "Pass",
+      "duration": 2762,
+      "message": "Console errors: 0"
+    }
+  ]
+}

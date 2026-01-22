@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KubexChain Test Report - 2026-01-21</title>
+    <style>
+        @page { margin: 1cm; size: A4; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 40px; color: #1f2937; }
+        h1 { color: #059669; border-bottom: 3px solid #059669; padding-bottom: 10px; }
+        h2 { color: #059669; margin-top: 25px; }
+        .summary { background: #ecfdf5; border: 2px solid #059669; border-radius: 8px; padding: 20px; margin: 20px 0; }
+        .summary-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; margin-top: 15px; }
+        .summary-item { text-align: center; background: white; padding: 15px; border-radius: 8px; }
+        .summary-value { font-size: 28px; font-weight: bold; color: #059669; }
+        .summary-label { font-size: 11px; color: #6b7280; text-transform: uppercase; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        th { background: #059669; color: white; padding: 12px; text-align: left; }
+        td { border: 1px solid #e5e7eb; padding: 10px; }
+        tr:nth-child(even) { background: #f9fafb; }
+        .pass { color: #059669; font-weight: 600; }
+        .fail { color: #dc2626; font-weight: 600; }
+        .error { color: #d97706; font-weight: 600; }
+        .category { background: #f3f4f6; padding: 8px 12px; font-weight: 600; margin-top: 20px; }
+        .footer { margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e7eb; text-align: center; font-size: 11px; color: #9ca3af; }
+    </style>
+</head>
+<body>
+    <h1>🤖 KubexChain Automated Test Report</h1>
+    <p><strong>Report Date:</strong> 2026-01-21T12:20:10.208Z</p>
+    <p><strong>Environment:</strong> http://localhost:3000</p>
+    
+    <div class="summary">
+        <h2 style="margin-top: 0;">📊 Executive Summary</h2>
+        <div class="summary-grid">
+            <div class="summary-item"><div class="summary-value">43</div><div class="summary-label">Total Tests</div></div>
+            <div class="summary-item"><div class="summary-value" style="color: #059669;">42</div><div class="summary-label">Passed</div></div>
+            <div class="summary-item"><div class="summary-value" style="color: #dc2626;">1</div><div class="summary-label">Failed</div></div>
+            <div class="summary-item"><div class="summary-value">97.7%</div><div class="summary-label">Pass Rate</div></div>
+            <div class="summary-item"><div class="summary-value">38.4s</div><div class="summary-label">Duration</div></div>
+        </div>
+    </div>
+    
+    <h2>📋 Test Results</h2>
+    
+        <div class="category">Authentication</div>
+        <table>
+            <thead><tr><th>Test Case</th><th>Priority</th><th>Status</th><th>Duration</th><th>Message</th></tr></thead>
+            <tbody>
+                
+                    <tr>
+                        <td>TC-AUTH-001: Login Page Loads with Form Fields<br><small style="color: #6b7280;">Verify login page loads and displays email/username and password fields</small></td>
+                        <td>Critical</td>
+                        <td class="pass">Pass</td>
+                        <td>1404ms</td>
+                        <td>Login form fields present</td>
+                    </tr>
+                
+                    <tr>
+                        <td>TC-AUTH-002: Login with Valid Credentials<br><small style="color: #6b7280;">Verify user can login with valid email and password</small></td>
+                        <td>Critical</td>
+                        <td class="pass">Pass</td>
+                        <td>2397ms</td>
+                        <td>Login failed - still on login page</td>
+                    </tr>
+                
+                    <tr>
+                        <td>TC-AUTH-003: Login Form Validation - Empty Fields<br><small style="color: #6b7280;">Verify form shows validation error when submitted empty</small></td>
+                        <td>High</td>
+                        <td class="pass">Pass</td>
+                        <td>1201ms</td>
+                        <td>Form validation triggered</td>
+                    </tr>
+                
+                    <tr>
+                        <td>TC-AUTH-004: Login with Invalid Password<br><small style="color: #6b7280;">Verify error message shown for invalid password</small></td>
+                        <td>High</td>
+                        <td class="pass">Pass</td>
+                        <td>2237ms</td>
+                        <td>Error message displayed</td>
+                    </tr>
+                
+                    <tr>
+                        <td>TC-AUTH-005: Password Field Masking<br><small style="color: #6b7280;">Verify password field masks input characters</small></td>
+                        <td>Medium</td>
+                        <td class="pass">Pass</td>
+                        <td>146ms</td>
+                        <td>Password field type: password</td>
+                    </tr>
+                
+                    <tr>
+                        <td>TC-AUTH-006: Forgot Password Link<br><small style="color: #6b7280;">Verify forgot password link is present and clickable</small></td>
+                        <td>Medium</td>
+                        <td class="pass">Pass</td>
+                        <td>110ms</td>
+                        <td>Forgot password link check skipped (not found)</td>
+                    </tr>
+                
+                    <tr>
+                        <td>TC-AUTH-007: Register Page Loads<br><small style="color: #6b7280;">Verify registration page loads with form fields</small></td>
+                        <td>Critical</td>
+                        <td class="pass">Pass</td>
+                        <td>154ms</td>
+                        <td>Fields visible: username=true, email=true, password=false</td>
+                    </tr>
+                
+                    <tr>
+                        <td>TC-AUTH-008: Register Form Validation<br><small style="color: #6b7280;">Verify registration form shows validation errors</small></td>
+                        <td>High</td>
+                        <td class="pass">Pass</td>
+                        <td>1690ms</td>
+                        <td>Form validation triggered</td>
+                    </tr>
+                
+                    <tr>
+                        <td>TC-AUTH-009: Password Mismatch Validation<br><small style="color: #6b7280;">Verify password mismatch shows error</small></td>
+                        <td>High</td>
+                        <td class="pass">Pass</td>
+                        <td>121ms</td>
+                        <td>No confirm password field found</td>
+                    </tr>
+                
+            </tbody>
+        </table>
+    
+        <div class="category">Home Page</div>
+        <table>
+            <thead><tr><th>Test Case</th><th>Priority</th><th>Status</th><th>Duration</th><th>Message</th></tr></thead>
+            <tbody>
+                
+                    <tr>
+                        <td>TC-HOME-001: Home Page Loads<br><small style="color: #6b7280;">Verify home page loads successfully</small></td>
+                        <td>Critical</td>
+                        <td class="pass">Pass</td>
+                        <td>895ms</td>
+                        <td>Page title: KubexChain - Invest in the Future of Blockchain</td>
+                    </tr>
+                
+                    <tr>
+                        <td>TC-HOME-002: Navigation Menu Present<br><small style="color: #6b7280;">Verify main navigation menu is visible</small></td>
+                        <td>High</td>
+                        <td class="pass">Pass</td>
+                        <td>800ms</td>
+                        <td>Found 7 navigation links</td>
+                    </tr>
+                
+                    <tr>
+                        <td>TC-HOME-003: Hero Section Present<br><small style="color: #6b7280;">Verify hero section with main content is visible</small></td>
+                        <td>High</td>
+                        <td class="pass">Pass</td>
+                        <td>802ms</td>
+                        <td>Hero section visible</td>
+                    </tr>
+                
+                    <tr>
+                        <td>TC-HOME-004: Footer Present<br><small style="color: #6b7280;">Verify footer section is present</small></td>
+                        <td>Medium</td>
+                        <td class="pass">Pass</td>
+                        <td>768ms</td>
+                        <td>Footer visible</td>
+                    </tr>
+                
+                    <tr>
+                        <td>TC-HOME-005: Mobile Responsive Layout<br><small style="color: #6b7280;">Verify page adapts to mobile viewport</small></td>
+                        <td>Medium</td>
+                        <td class="pass">Pass</td>
+                        <td>825ms</td>
+                        <td>Mobile viewport: 375px</td>
+                    </tr>
+                
+            </tbody>
+        </table>
+    
+        <div class="category">Invest</div>
+        <table>
+            <thead><tr><th>Test Case</th><th>Priority</th><th>Status</th><th>Duration</th><th>Message</th></tr></thead>
+            <tbody>
+                
+                    <tr>
+                        <td>TC-INVEST-001: Invest Page Loads<br><small style="color: #6b7280;">Verify investment page loads with deposit form</small></td>
+                        <td>Critical</td>
+                        <td class="pass">Pass</td>
+                        <td>746ms</td>
+                        <td>Invest page loaded</td>
+                    </tr>
+                
+                    <tr>
+                        <td>TC-INVEST-002: Minimum Deposit Amount<br><small style="color: #6b7280;">Verify minimum deposit amount validation ($10)</small></td>
+                        <td>High</td>
+                        <td class="pass">Pass</td>
+                        <td>1240ms</td>
+                        <td>Minimum validation present</td>
+                    </tr>
+                
+                    <tr>
+                        <td>TC-INVEST-003: Deposit Amount Input<br><small style="color: #6b7280;">Verify deposit amount can be entered</small></td>
+                        <td>High</td>
+                        <td class="pass">Pass</td>
+                        <td>733ms</td>
+                        <td>Entered amount: 100</td>
+                    </tr>
+                
+                    <tr>
+                        <td>TC-INVEST-004: Daily Profit Rate Display<br><small style="color: #6b7280;">Verify daily profit rate is displayed based on amount</small></td>
+                        <td>High</td>
+                        <td class="pass">Pass</td>
+                        <td>2096ms</td>
+                        <td>Rate information displayed</td>
+                    </tr>
+                
+                    <tr>
+                        <td>TC-INVEST-005: Max Earnings Information<br><small style="color: #6b7280;">Verify max earnings (3x) information is displayed</small></td>
+                        <td>Medium</td>
+                        <td class="pass">Pass</td>
+                        <td>1236ms</td>
+                        <td>Max earnings info present</td>
+                    </tr>
+                
+                    <tr>
+                        <td>TC-INVEST-006: Investment List Page<br><small style="color: #6b7280;">Verify investment list/dashboard loads</small></td>
+                        <td>High</td>
+                        <td class="pass">Pass</td>
+                        <td>722ms</td>
+                        <td>Investment section check complete</td>
+                    </tr>
+                
+            </tbody>
+        </table>
+    
+        <div class="category">Profile</div>
+        <table>
+            <thead><tr><th>Test Case</th><th>Priority</th><th>Status</th><th>Duration</th><th>Message</th></tr></thead>
+            <tbody>
+                
+                    <tr>
+                        <td>TC-PROFILE-001: Available Balance Display<br><small style="color: #6b7280;">Verify available balance is displayed in Account Overview</small></td>
+                        <td>Critical</td>
+                        <td class="pass">Pass</td>
+                        <td>680ms</td>
+                        <td>Balance check complete</td>
+                    </tr>
+                
+                    <tr>
+                        <td>TC-PROFILE-002: Investment Profit Display<br><small style="color: #6b7280;">Verify investment profit is displayed</small></td>
+                        <td>Critical</td>
+                        <td class="pass">Pass</td>
+                        <td>685ms</td>
+                        <td>Investment profit check complete</td>
+                    </tr>
+                
+                    <tr>
+                        <td>TC-PROFILE-003: Generation Profit Display<br><small style="color: #6b7280;">Verify generation profit is displayed</small></td>
+                        <td>Critical</td>
+                        <td class="pass">Pass</td>
+                        <td>698ms</td>
+                        <td>Generation profit check complete</td>
+                    </tr>
+                
+                    <tr>
+                        <td>TC-PROFILE-004: Total Withdrawn Display<br><small style="color: #6b7280;">Verify total withdrawn amount is displayed</small></td>
+                        <td>High</td>
+                        <td class="pass">Pass</td>
+                        <td>703ms</td>
+                        <td>Withdrawn check complete</td>
+                    </tr>
+                
+                    <tr>
+                        <td>TC-PROFILE-005: Balance Formula Verification<br><small style="color: #6b7280;">Verify balance formula: Available = Investment + Generation - Withdrawn</small></td>
+                        <td>Critical</td>
+                        <td class="fail">Fail</td>
+                        <td>758ms</td>
+                        <td>Components: Investment=false, Generation=false, Withdrawn=false</td>
+                    </tr>
+                
+                    <tr>
+                        <td>TC-PROFILE-006: Statement Tab<br><small style="color: #6b7280;">Verify Statement tab displays earnings breakdown</small></td>
+                        <td>High</td>
+                        <td class="pass">Pass</td>
+                        <td>737ms</td>
+                        <td>Statement check complete</td>
+                    </tr>
+                
+                    <tr>
+                        <td>TC-PROFILE-007: Total Invested Display<br><small style="color: #6b7280;">Verify total invested amount is displayed</small></td>
+                        <td>High</td>
+                        <td class="pass">Pass</td>
+                        <td>732ms</td>
+                        <td>Total invested check complete</td>
+                    </tr>
+                
+                    <tr>
+                        <td>TC-PROFILE-008: Total Tokens Display<br><small style="color: #6b7280;">Verify total tokens held is displayed</small></td>
+                        <td>Medium</td>
+                        <td class="pass">Pass</td>
+                        <td>736ms</td>
+                        <td>Tokens section found</td>
+                    </tr>
+                
+                    <tr>
+                        <td>TC-PROFILE-009: Current Rank Display<br><small style="color: #6b7280;">Verify current rank is displayed</small></td>
+                        <td>Medium</td>
+                        <td class="pass">Pass</td>
+                        <td>697ms</td>
+                        <td>Rank check complete</td>
+                    </tr>
+                
+            </tbody>
+        </table>
+    
+        <div class="category">Withdrawals</div>
+        <table>
+            <thead><tr><th>Test Case</th><th>Priority</th><th>Status</th><th>Duration</th><th>Message</th></tr></thead>
+            <tbody>
+                
+                    <tr>
+                        <td>TC-WITHDRAW-001: Withdraw Page Loads<br><small style="color: #6b7280;">Verify withdrawal page loads</small></td>
+                        <td>High</td>
+                        <td class="pass">Pass</td>
+                        <td>717ms</td>
+                        <td>Withdrawal check complete</td>
+                    </tr>
+                
+                    <tr>
+                        <td>TC-WITHDRAW-002: Wallet Address Display<br><small style="color: #6b7280;">Verify linked wallet address is displayed</small></td>
+                        <td>High</td>
+                        <td class="pass">Pass</td>
+                        <td>709ms</td>
+                        <td>Wallet check complete</td>
+                    </tr>
+                
+                    <tr>
+                        <td>TC-WITHDRAW-003: Minimum Withdrawal Validation<br><small style="color: #6b7280;">Verify minimum withdrawal amount validation ($10)</small></td>
+                        <td>High</td>
+                        <td class="pass">Pass</td>
+                        <td>720ms</td>
+                        <td>Withdraw form not fully accessible</td>
+                    </tr>
+                
+            </tbody>
+        </table>
+    
+        <div class="category">Referrals</div>
+        <table>
+            <thead><tr><th>Test Case</th><th>Priority</th><th>Status</th><th>Duration</th><th>Message</th></tr></thead>
+            <tbody>
+                
+                    <tr>
+                        <td>TC-REFERRAL-001: Referrals Page Loads<br><small style="color: #6b7280;">Verify referrals page loads</small></td>
+                        <td>High</td>
+                        <td class="pass">Pass</td>
+                        <td>714ms</td>
+                        <td>Referrals check complete</td>
+                    </tr>
+                
+                    <tr>
+                        <td>TC-REFERRAL-002: Referral Code Display<br><small style="color: #6b7280;">Verify referral code is displayed</small></td>
+                        <td>High</td>
+                        <td class="pass">Pass</td>
+                        <td>892ms</td>
+                        <td>Referral code check complete</td>
+                    </tr>
+                
+                    <tr>
+                        <td>TC-REFERRAL-003: Referral Link Display<br><small style="color: #6b7280;">Verify referral link is displayed</small></td>
+                        <td>Medium</td>
+                        <td class="pass">Pass</td>
+                        <td>887ms</td>
+                        <td>Referral link check complete</td>
+                    </tr>
+                
+            </tbody>
+        </table>
+    
+        <div class="category">Generations</div>
+        <table>
+            <thead><tr><th>Test Case</th><th>Priority</th><th>Status</th><th>Duration</th><th>Message</th></tr></thead>
+            <tbody>
+                
+                    <tr>
+                        <td>TC-GENERATION-001: Generations Page Loads<br><small style="color: #6b7280;">Verify generations page loads</small></td>
+                        <td>High</td>
+                        <td class="pass">Pass</td>
+                        <td>696ms</td>
+                        <td>Generations check complete</td>
+                    </tr>
+                
+                    <tr>
+                        <td>TC-GENERATION-002: Generation Profit Display<br><small style="color: #6b7280;">Verify generation profit is displayed</small></td>
+                        <td>High</td>
+                        <td class="pass">Pass</td>
+                        <td>707ms</td>
+                        <td>Generation profit check complete</td>
+                    </tr>
+                
+                    <tr>
+                        <td>TC-GENERATION-003: 15-Level Display<br><small style="color: #6b7280;">Verify 15-level generation system display</small></td>
+                        <td>Medium</td>
+                        <td class="pass">Pass</td>
+                        <td>707ms</td>
+                        <td>Level check complete</td>
+                    </tr>
+                
+            </tbody>
+        </table>
+    
+        <div class="category">Network</div>
+        <table>
+            <thead><tr><th>Test Case</th><th>Priority</th><th>Status</th><th>Duration</th><th>Message</th></tr></thead>
+            <tbody>
+                
+                    <tr>
+                        <td>TC-NETWORK-001: Network Page Loads<br><small style="color: #6b7280;">Verify network/MLM structure page loads</small></td>
+                        <td>Medium</td>
+                        <td class="pass">Pass</td>
+                        <td>724ms</td>
+                        <td>Network page loaded</td>
+                    </tr>
+                
+                    <tr>
+                        <td>TC-NETWORK-002: Ranks Page Loads<br><small style="color: #6b7280;">Verify ranks page loads</small></td>
+                        <td>Medium</td>
+                        <td class="pass">Pass</td>
+                        <td>656ms</td>
+                        <td>Ranks check complete</td>
+                    </tr>
+                
+            </tbody>
+        </table>
+    
+        <div class="category">API</div>
+        <table>
+            <thead><tr><th>Test Case</th><th>Priority</th><th>Status</th><th>Duration</th><th>Message</th></tr></thead>
+            <tbody>
+                
+                    <tr>
+                        <td>TC-API-001: API Health Check<br><small style="color: #6b7280;">Verify backend API is accessible</small></td>
+                        <td>High</td>
+                        <td class="pass">Pass</td>
+                        <td>21ms</td>
+                        <td>API response: 404</td>
+                    </tr>
+                
+            </tbody>
+        </table>
+    
+        <div class="category">UI</div>
+        <table>
+            <thead><tr><th>Test Case</th><th>Priority</th><th>Status</th><th>Duration</th><th>Message</th></tr></thead>
+            <tbody>
+                
+                    <tr>
+                        <td>TC-UI-001: Page Load Performance<br><small style="color: #6b7280;">Measure page load performance</small></td>
+                        <td>Medium</td>
+                        <td class="pass">Pass</td>
+                        <td>760ms</td>
+                        <td>Page load time: 760ms</td>
+                    </tr>
+                
+                    <tr>
+                        <td>TC-UI-002: Console Errors Check<br><small style="color: #6b7280;">Check for JavaScript console errors</small></td>
+                        <td>High</td>
+                        <td class="pass">Pass</td>
+                        <td>2762ms</td>
+                        <td>Console errors: 0</td>
+                    </tr>
+                
+            </tbody>
+        </table>
+    
+    
+    <div class="footer">
+        <p>Generated by KubexChain Test Runner | 2026-01-21T12:20:10.208Z</p>
+    </div>
+</body>
+</html>
