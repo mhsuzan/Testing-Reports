@@ -1,120 +1,132 @@
-# KubexChain Testing Reports
+# KubexChain Testing Documentation
 
-This repository contains all test cases, test scripts, and reports for the KubexChain project.
+This folder contains all testing documentation for the KubexChain project.
 
-## Repository Structure
+## Folder Structure
 
 ```
-Testing-Reports/
-├── README.md
-├── automated/
-│   ├── test-cases/
-│   │   ├── authentication.spec.ts
-│   │   ├── deposits.spec.ts
-│   │   ├── generations.spec.ts
-│   │   ├── profile.spec.ts
-│   │   ├── withdrawals.spec.ts
-│   │   └── playwright.config.ts
-│   └── test-reports/
-│       ├── run-tests.js
-│       ├── generate-report.js
-│       ├── test-results.json
-│       ├── Test-Report-2026-01-20.md
-│       ├── Test-Report-Complete.md
-│       └── Test-Report-Latest.html
-├── manual/
-│   ├── test-cases/
+testing/
+├── README.md                    # This file
+├── manual/                      # Manual testing documentation
+│   ├── test-cases/             # Manual test case documents
 │   │   ├── TC-AUTH-001.md
 │   │   ├── TC-DEPOSIT-001.md
-│   │   ├── TC-GENERATION-001.md
+│   │   ├── TC-WITHDRAWAL-001.md
 │   │   ├── TC-PROFILE-001.md
-│   │   └── TC-WITHDRAWAL-001.md
-│   └── test-reports/
-│       └── Test-Report-Complete.md
-└── templates/
+│   │   ├── TC-REFERRAL-001.md
+│   │   └── TC-GENERATION-001.md
+│   └── test-reports/           # Manual test execution reports (PDF)
+│       ├── Test-Report-2026-01-01.pdf
+│       └── Test-Report-Cycle-1.pdf
+├── automated/                   # Automated testing documentation
+│   ├── test-cases/             # Automated test scripts/cases
+│   │   ├── authentication.spec.ts
+│   │   ├── deposits.spec.ts
+│   │   ├── withdrawals.spec.ts
+│   │   ├── profile.spec.ts
+│   │   └── README.md
+│   └── test-reports/           # Automated test execution reports (PDF)
+│       ├── Automated-Test-Report-2026-01-01.pdf
+│       └── Cypress-Test-Results.pdf
+└── templates/                  # Templates for test cases and reports
     ├── template-test-case.md
     ├── template-test-report.md
     └── template-bug-report.md
 ```
 
-## Test Coverage
+## Test Case Categories
 
-### Automated Tests (Playwright)
-- **Authentication**: Login, registration, form validation
-- **Deposits**: Investment creation, profit calculations
-- **Generations**: Multi-level commission system
-- **Profile**: User balance, earnings display
-- **Withdrawals**: Withdrawal functionality
+### Authentication (TC-AUTH)
+- User registration
+- User login
+- Wallet authentication
+- Password reset
+- Email verification
+- Session management
 
-### Manual Test Cases
-- TC-AUTH-001: Authentication flows
-- TC-DEPOSIT-001: Deposit creation and profit calculation
-- TC-GENERATION-001: Generation/MLM system
-- TC-PROFILE-001: User profile and balance verification
-- TC-WITHDRAWAL-001: Withdrawal process
+### Deposits (TC-DEPOSIT)
+- Create deposit
+- Deposit approval
+- Daily profit calculation
+- Max earnings cap (3x)
+- Deposit status tracking
 
-## Running Automated Tests
+### Withdrawals (TC-WITHDRAWAL)
+- Withdrawal request
+- Withdrawal processing
+- Balance deduction
+- Withdrawal status
+- Failed withdrawals
 
-```bash
-# Navigate to test directory
-cd automated/test-reports
+### Profile (TC-PROFILE)
+- Profile data display
+- Balance calculation
+- Investment tracking
+- Rank system
+- Token holdings
 
-# Run all tests
-node run-tests.js
+### Referrals (TC-REFERRAL)
+- Referral code generation
+- Referral tracking
+- Referral bonuses
+- Downline visualization
 
-# Generate HTML report
-node generate-report.js
-```
+### Generations (TC-GENERATION)
+- Generation commission calculation
+- 15-level deep commission tracking
+- Daily generation profit (0.10%)
+- Generation earnings display
 
-## Latest Test Results
+## Test Execution Guidelines
 
-**Date**: 2026-01-21
-**Total Tests**: 43
-**Passed**: 42
-**Failed**: 1
-**Pass Rate**: 97.7%
+### Manual Testing
+1. Review test case document
+2. Execute test steps as documented
+3. Record actual results
+4. Capture screenshots for evidence
+5. Document any discrepancies
+6. Report bugs using bug template
 
-### Results by Category
-| Category | Passed | Total | Rate |
-|----------|--------|-------|------|
-| Authentication | 9 | 9 | 100% |
-| Home Page | 5 | 5 | 100% |
-| Invest | 6 | 6 | 100% |
-| Profile | 8 | 9 | 89% |
-| Withdrawals | 3 | 3 | 100% |
-| Referrals | 3 | 3 | 100% |
-| Generations | 3 | 3 | 100% |
-| Network | 2 | 2 | 100% |
-| API | 1 | 1 | 100% |
-| UI | 2 | 2 | 100% |
+### Automated Testing
+1. Ensure test environment is ready
+2. Run test suite: `npm run test`
+3. Review test results
+4. Check Cypress dashboard for screenshots/videos
+5. Update test scripts if needed
+6. Generate PDF report
 
-## Investment Profit Rates
+## Test Data
 
-| Amount Range | Daily Rate |
-|--------------|------------|
-| $10 - $500 | 0.25% |
-| $501 - $2,000 | 0.30% |
-| $2,001 - $5,000 | 0.35% |
-| $5,001 - $10,000 | 0.40% |
-| $10,001+ | 0.45% |
+Test accounts for manual testing:
+- Test User 1: `testuser01` / `password123`
+- Test User 2: `testuser02` / `password123`
+- Admin Account: `admin@kubexchain.com` / `admin123`
 
-## Generation Bonus (15 Levels)
+Test wallet addresses:
+- Wallet 1: `0x742d35Cc6634C0532925a3b844Bc9e7595f8fE45`
+- Wallet 2: `0x8626f6940E2eb28930eFb4CeF49B2d1F2c9C1199`
 
-| Level | Commission |
-|-------|------------|
-| 1 | 8% |
-| 2 | 5% |
-| 3 | 3% |
-| 4 | 2% |
-| 5 | 2% |
-| 6-15 | 1% each |
+## Environment Information
 
-## Notes
+- **Production URL:** https://kubexchain.com
+- **Staging URL:** https://staging.kubexchain.com
+- **Backend API:** https://api.kubexchain.com
+- **Database:** MongoDB Atlas
 
-- Maximum earnings capped at 3x deposit amount
-- Generation bonus is LOCKED (not withdrawable)
-- Locked generation balance earns 0.10% daily (withdrawable)
-- Daily profit calculation runs at midnight (cron job)
+## Reporting Issues
+
+1. Use the bug report template in `/templates`
+2. Include steps to reproduce
+3. Attach screenshots/videos
+4. Note browser and device information
+5. Assign severity and priority
+
+## Version History
+
+| Version | Date | Description | Author |
+|---------|------|-------------|--------|
+| 1.0 | 2026-01-20 | Initial testing structure | Development Team |
 
 ---
-**Last Updated**: 2026-01-21
+
+For questions or issues, contact: development@kubexchain.com
